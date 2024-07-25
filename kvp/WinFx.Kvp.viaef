@@ -1,0 +1,467 @@
+Application = WinFx.Kvp
+IDEVersion = 2.20b
+GalleryName = 
+GalleryPage = 
+GalleryDefaultName = 
+Target = 2
+Platform = x86
+Language = XSharp
+Runtime = CLR4
+Dialect = FoxPro
+Folder = %ProjectPath%\Applications\WinFx.Kvp\
+PrgSubFolder = \Prg
+ResourcesSubFolder = \Resources
+Description = KVP Reader Class.
+NameSpace = 
+Assembly = WinFx.Kvp
+Extension = 
+ApplicationIcon = 
+OutputFolder = 
+Frameworks = 1
+GUID = 6562C809-1C20-49B3-93A5-721712D1EC86
+IncludeInProjectBuild = 1
+IncludeInProjectSearch = 1
+IncludeInProjectExport = 1
+IncludePath = 
+StdDefsFile = 
+AppToRun = 
+SignAssembly = 0
+KeyFile = 
+
+[ExportOptions]
+ExportResources = 1
+ExportImages = 1
+[WinFx.Kvp FileGroups]
+[WinFx.Kvp Files]
+File = %AppPath%\Prg\Token.prg
+FileGUID = 5F9C0F80-9346-4100-96CF-2A237824F39F
+FileType = Code
+CopyToBin = 0
+File = %AppPath%\Prg\Scanner.prg
+FileGUID = 59A4597B-EE77-45A9-BDC1-529DA660AB7E
+FileType = Code
+CopyToBin = 0
+File = %AppPath%\Prg\TokenType.prg
+FileGUID = D1CD5A89-3698-448E-B368-F054EA2EE8AF
+FileType = Code
+CopyToBin = 0
+File = %AppPath%\Prg\Parser.prg
+FileGUID = B79DB115-86E6-4790-8DF0-DF206F5F5861
+FileType = Code
+CopyToBin = 0
+File = %AppPath%\Prg\Kvp.prg
+FileGUID = 33F1BA06-A83F-454C-A824-7D8289C0ACA4
+FileType = Code
+CopyToBin = 0
+[WinFx.Kvp References]
+ReferenceGAC = CLR4,System,1,0,4.0.0.0
+ReferenceGAC = CLR4,XSharp.Core,1,0,2.6.0.0
+ReferenceGAC = CLR4,XSharp.RT,1,0,2.6.0.0
+ReferenceGAC = CLR4,XSharp.VFP,1,0,2.6.0.0
+ReferenceGAC = CLR4,System.Text.RegularExpressions,1,0,4.0.0.0
+[WinFx.Kvp Resources]
+[WinFx.Kvp Native Resources]
+[WinFx.Kvp License files]
+[WinFx.Kvp General Options]
+Switches=
+ZeroArrays=0
+CaseSensitive=0
+ImplicitNamespace=0
+VO1=0
+VO2=0
+VO3=0
+VO4=0
+VO5=0
+VO6=0
+VO7=0
+VO8=0
+VO9=0
+VO10=0
+VO11=0
+VO12=0
+VO13=0
+VO14=0
+VO16=0
+VO17=0
+FOX1=0
+FOX2=0
+XPP1=0
+LateBound=0
+Unsafe=0
+Undeclared=1
+EnforceSelf=0
+EnforceOverride=0
+UseNativeVersion=0
+MemVar=1
+IgnoreStdDefs=0
+Ovf=0
+FOvf=0
+ModernSyntax=0
+NamedArgs=0
+InitLocals=0
+AllowOldStyleAssignments=0
+ResponseOnly=0
+[WinFx.Kvp Configurations]
+AppConfig = Debug,11111111-1111-1111-1111-111111111111
+  Switches=
+  SwitchesCF=
+  CommandLine=
+  CommandLineCF=
+  Debug=1
+  DebugInit=1
+  DefineDebug=1
+  DefineTrace=0
+  SyntaxOnly=0
+  WarningsErrors=0
+  ForceConsole=0
+  ForceX86=0
+  Optimize=0
+AppConfig = Release,22222222-2222-2222-2222-222222222222
+  Switches=
+  SwitchesCF=
+  CommandLine=
+  CommandLineCF=
+  Debug=0
+  DebugInit=0
+  DefineDebug=0
+  DefineTrace=0
+  SyntaxOnly=0
+  WarningsErrors=0
+  ForceConsole=0
+  ForceX86=0
+  Optimize=0
+ENDApplication = WinFx.Kvp
+
+[FileContents]
+%#IDE#%File=TEXT,5F9C0F80-9346-4100-96CF-2A237824F39F
+CLASS Token
+	PROPERTY nType AS TokenType AUTO
+	PROPERTY oValue AS OBJECT AUTO
+
+	CONSTRUCTOR
+	END CONSTRUCTOR
+	
+	CONSTRUCTOR(tnType AS TokenType, toValue AS OBJECT)
+		nType := tnType
+		oValue := toValue
+	END CONSTRUCTOR
+	
+	PUBLIC OVERRIDE METHOD ToSTring AS STRING
+		RETURN String.Format("Token({0}, '{1}')", nType, oValue)
+	END METHOD
+END CLASS
+%#IDE#%File=TEXT,59A4597B-EE77-45A9-BDC1-529DA660AB7E
+// Application : WinFx.Kvp
+// Scanner.prg , Created : 22/7/2024   15:30
+// User : irwin
+USING System.Text.RegularExpressions
+USING System.Collections.Generic
+
+STATIC CLASS Scanner
+	STATIC PRIVATE cSource AS STRING
+	STATIC PRIVATE nCursor AS INT
+	
+	STATIC PRIVATE oSpec AS List<Tuple<STRING, TokenType>>
+		
+	STATIC PUBLIC METHOD ScanTokens(tcInput AS STRING) AS List<Token>
+		LoadTokens()
+		nCursor := 0
+		IF FILE(tcInput)		
+			cSource := FILETOSTR(tcInput)
+		ELSE 
+			cSource := tcInput
+		ENDIF
+		LOCAL loTokens := List<Token>{} AS List<Token>
+		DO WHILE .T.
+			LOCAL loToken := GetNextToken() AS Token
+			loTokens:Add(loToken)
+			IF loToken:nType == TokenType.TK_EOF
+				EXIT
+			ENDIF			
+		ENDDO						
+		
+		RETURN loTokens
+	END METHOD
+	
+	STATIC PRIVATE METHOD GetNextToken AS Token
+		IF NOT HasMoreTokens()
+			RETURN Token{TokenType.TK_EOF, NULL}
+		ENDIF
+		
+		LOCAL lcInput := cSource:Substring(nCursor)
+		
+		FOREACH loTuple AS Tuple<STRING, TokenType> IN oSpec
+			LOCAL lcTokenValue := Match(loTuple:Item1, lcInput) AS STRING
+			IF lcTokenValue == NULL
+				LOOP
+			ENDIF
+			IF loTuple:Item2 == TokenType.TK_IGNORE
+				RETURN GetNextToken()
+			ENDIF
+			LOCAL lnTokenType := loTuple:Item2 AS TokenType
+			LOCAL loLiteral AS OBJECT
+			SWITCH lnTokenType
+			CASE TokenType.TK_NUMBER
+				loLiteral := VAL(lcTokenValue)
+			CASE TokenType.TK_SINGLE_QUOTED_STRING
+			CASE TokenType.TK_DOUBLE_QUOTED_STRING
+			CASE TokenType.TK_TRIPLE_QUOTED_STRING
+				loLiteral := SUBSTR(lcTokenValue,2,LEN(lcTokenValue)-2)
+			CASE TokenType.TK_TRUE
+				loLiteral := .T.
+			CASE TokenType.TK_FALSE
+				loLiteral := .F.
+			CASE TokenType.TK_NULL
+				loLiteral := .NULL.
+			CASE TokenType.TK_EXPRESSION
+				NOP
+			OTHERWISE
+				loLiteral := lcTokenValue
+			END SWITCH
+			
+			RETURN Token{lnTokenType, loLiteral}
+		ENDFOR
+		
+		RETURN Token{TokenType.TK_EOF, NULL}
+		
+	END METHOD
+	
+	STATIC PRIVATE METHOD Match(tcPattern AS STRING, tcInput AS STRING) AS STRING
+		LOCAL loRegEx := RegEx{tcPattern, RegexOptions.IgnoreCase} AS Regex
+		LOCAL loMatches := loRegEx:Matches(tcInput) AS MatchCollection
+		IF loMatches:Count > 0
+			nCursor += loMatches[0]:Length
+			RETURN loMatches[0]:Value
+		ENDIF
+		RETURN NULL
+	END METHOD
+		
+	
+	STATIC PRIVATE METHOD HasMoreTokens AS LOGIC
+		RETURN nCursor < cSource:Length
+	END METHOD
+	
+	
+	STATIC PRIVATE METHOD LoadTokens AS VOID
+		oSpec := List<Tuple<STRING, TokenType>>{}
+		
+		 // --------------------------------------------------------------------
+		 // Whitespace		
+		oSpec:Add(Tuple<STRING, TokenType>{"^\s+", TokenType.TK_IGNORE})
+		 // --------------------------------------------------------------------
+		 // Comments
+		oSpec:Add(Tuple<STRING, TokenType>{"^\-\-.*", TokenType.TK_IGNORE})
+		// --------------------------------------------------------------------
+		// Assignment operators: =, *=, /=, +=, -=
+		oSpec:Add(Tuple<STRING, TokenType>{"^=", TokenType.TK_ASSIGN})
+	    // --------------------------------------
+	    // Keywords
+	    oSpec:Add(Tuple<STRING, TokenType>{"^\.[T]\.", TokenType.TK_TRUE})
+	    oSpec:Add(Tuple<STRING, TokenType>{"^\bTRUE\b", TokenType.TK_TRUE})
+	    oSpec:Add(Tuple<STRING, TokenType>{"^\.[F]\.", TokenType.TK_FALSE})
+	    oSpec:Add(Tuple<STRING, TokenType>{"^\bFALSE\b", TokenType.TK_FALSE})
+	    oSpec:Add(Tuple<STRING, TokenType>{"^\.NULL\.", TokenType.TK_NULL})
+	
+	    // --------------------------------------
+	    // Numbers:
+	    oSpec:Add(Tuple<STRING, TokenType>{"^\d+([\.\,]\d+)*", TokenType.TK_NUMBER})
+	
+	    // --------------------------------------
+	    // Triple quoted String:
+	    oSpec:Add(Tuple<STRING, TokenType>{"^""""""([\s\S]*?)""""""", TokenType.TK_TRIPLE_QUOTED_STRING})
+	
+	    // --------------------------------------
+	    // Single quoted String:
+	    oSpec:Add(Tuple<STRING, TokenType>{"^'[^']*'", TokenType.TK_SINGLE_QUOTED_STRING})
+	
+	    // --------------------------------------
+	    // Double quoted String:    
+	    oSpec:Add(Tuple<STRING, TokenType>{"^""[^""]*""", TokenType.TK_DOUBLE_QUOTED_STRING})
+	
+	    // --------------------------------------
+	    // Backticked String:
+	    oSpec:Add(Tuple<STRING, TokenType>{"^`[^`]*`", TokenType.TK_BACK_TICKED_STRING})
+	
+	    // --------------------------------------
+	    // Expressions
+	    oSpec:Add(Tuple<STRING, TokenType>{"^\$\(.+\)", TokenType.TK_EXPRESSION})
+	
+	    // --------------------------------------
+	    // Builtin functions
+	    oSpec:Add(Tuple<STRING, TokenType>{"^\w+\((.*?)\)", TokenType.TK_BUILTIN})
+	
+	    // --------------------------------------
+	    // Symbols
+	    oSpec:Add(Tuple<STRING, TokenType>{"^\[", TokenType.TK_LBRACKET})
+	    oSpec:Add(Tuple<STRING, TokenType>{"^\]", TokenType.TK_RBRACKET})
+	    oSpec:Add(Tuple<STRING, TokenType>{"^,", TokenType.TK_COMMA})
+	
+	    // --------------------------------------
+	    // Key
+	    oSpec:Add(Tuple<STRING, TokenType>{"[a-zA-Z_0-9áéíóúÁÉÍÓÚ \-_\.#]+", TokenType.TK_IDENT})
+	END METHOD
+	
+END CLASS
+%#IDE#%File=TEXT,D1CD5A89-3698-448E-B368-F054EA2EE8AF
+// Application : WinFx.Kvp
+// TokenType.prg , Created : 23/7/2024   14:40
+// User : irwin
+ENUM TokenType
+	TK_ASSIGN
+	TK_TRUE
+	TK_FALSE
+	TK_NULL
+	TK_NUMBER
+	TK_TRIPLE_QUOTED_STRING
+	TK_DOUBLE_QUOTED_STRING
+	TK_SINGLE_QUOTED_STRING
+	TK_BACK_TICKED_STRING
+	TK_EXPRESSION
+	TK_BUILTIN
+	TK_LBRACKET
+	TK_RBRACKET
+	TK_COMMA
+	TK_IDENT		
+	TK_EOF
+	TK_IGNORE
+END ENUM
+%#IDE#%File=TEXT,B79DB115-86E6-4790-8DF0-DF206F5F5861
+// Application : WinFx.Kvp
+// Parser.prg , Created : 24/7/2024   18:18
+// User : irwin
+
+STATIC CLASS Parser
+	STATIC PUBLIC METHOD Parse(tcConfigFile AS STRING) AS Kvp
+		LOCAL loData := System.Collections.Generic.Dictionary<STRING, OBJECT>{} AS System.Collections.Generic.Dictionary<STRING, OBJECT>
+		LOCAL loTokens := Scanner.ScanTokens(tcConfigFile) AS System.Collections.Generic.List<Token>
+		LOCAL loToken AS Token
+		LOCAL lcKey AS STRING
+		LOCAL lvValue AS OBJECT
+		LOCAL loExpressions := System.Collections.Generic.Dictionary<STRING, OBJECT>{} AS System.Collections.Generic.Dictionary<STRING,OBJECT>
+		FOR LOCAL i := 0 AS INT TO loTokens:Count
+			loToken := loTokens[i]
+			IF loToken:nType == TokenType.TK_EOF
+				EXIT
+			ENDIF
+			
+			IF loToken:nType == TokenType.TK_ASSIGN
+				LOOP
+			ENDIF
+			
+			IF loTokens[i+1]:nType == TokenType.TK_ASSIGN
+				lcKey := LOWER(ALLTRIM((STRING)loToken:oValue))
+				LOOP
+			ENDIF
+			
+			DO CASE
+			CASE loToken:nType == TokenType.TK_LBRACKET
+				i++ // skip TK_LBRACKET '['
+				lvValue := System.Collections.ArrayList{}
+				LOCAL lvValue2 := (System.Collections.ArrayList)lvValue AS System.Collections.ArrayList
+				IF loTokens[i]:nType != TokenType.TK_RBRACKET
+					loToken := loTokens[i]
+					lvValue2:Add(ParseValue(loToken))
+					i++
+					DO WHILE loTokens[i]:nType == TokenType.TK_COMMA
+						i++
+						loToken := loTokens[i]
+						lvValue2:Add(ParseValue(loToken))
+						i++
+					ENDDO
+				ENDIF
+				lvValue := lvValue2
+				// TK_RBRACKET will be consumed in the next iteration
+			CASE loToken:nType == TokenType.TK_EXPRESSION
+				loExpressions:Add(lcKey, loToken)
+				lvValue := NULL
+			CASE loToken:nType == TokenType.TK_BUILTIN
+				lvValue := ParseBuiltin(loToken)
+			OTHERWISE  
+				// Scalar value
+				lvValue := loToken:oValue
+			ENDCASE
+			
+			IF !EMPTY(lcKey)
+				loData:Add(lcKey, lvValue)
+				lvValue := ""
+				lcKey := ""
+			ENDIF			
+			
+			// Evaluate all previous collected expressions
+			FOREACH loPair AS System.Collections.Generic.KeyValuePair<STRING, OBJECT> IN loExpressions
+				loData:Add(loPair:Key, ParseValue(loPair:Value))
+			ENDFOR
+			
+		ENDFOR
+		
+		RETURN Kvp{loData}
+	END METHOD
+	
+	STATIC PRIVATE METHOD ParseValue(toToken AS Token) AS OBJECT
+		LOCAL lvValue := "" AS OBJECT
+		DO CASE
+		CASE toToken:nType == TokenType.TK_EXPRESSION
+			// TODO(irwin): Evaluate expression
+			NOP
+		OTHERWISE
+			lvValue := toToken:oValue
+		ENDCASE
+		RETURN lvValue
+	END METHOD
+	
+	STATIC PRIVATE METHOD ParseBuiltin(toToken AS Token) AS OBJECT
+		LOCAL lcValue := (STRING)toToken:oValue
+		LOCAL lcFuncName := LOWER(GETWORDNUM(lcValue, 1, "("))
+		LOCAL lcParam := SUBSTR(lcValue, at("(", lcValue)+1)
+		lcParam := SUBSTR(lcParam, 1, LEN(lcParam)-1)
+		IF INLIST(LEFT(lcParam,1), '"', "'")
+			lcParam := SUBSTR(lcParam, 2, LEN(lcParam)-2)
+		ENDIF
+		LOCAL loResult AS OBJECT
+		
+		DO CASE
+		CASE lcFuncName == "decode"
+			LOCAL laBytes := System.Convert.FromBase64String(lcParam) AS System.Byte[]
+			RETURN System.Text.Encoding.UTF8:GetString(laBytes)
+		CASE lcFuncName == "encode"
+			LOCAL laBytes := System.Text.Encoding.UTF8:GetBytes(lcParam) AS System.Byte[]
+			RETURN System.Convert.ToBase64String(laBytes)
+		OTHERWISE
+			// TODO(irwin): show error
+			NOP
+		ENDCASE
+		
+		
+		RETURN loResult
+		
+	END METHOD     	
+
+END CLASS
+%#IDE#%File=TEXT,33F1BA06-A83F-454C-A824-7D8289C0ACA4
+// Application : WinFx.Kvp
+// Kvp.prg , Created : 24/7/2024   20:46
+// User : irwin
+CLASS Kvp
+	PUBLIC oData AS System.Collections.Generic.Dictionary<STRING, OBJECT>
+	CONSTRUCTOR
+	END CONSTRUCTOR
+
+	CONSTRUCTOR(toData AS System.Collections.Generic.Dictionary<STRING, OBJECT>)
+		oData := toData
+	END CONSTRUCTOR
+	
+	METHOD SetData(toData AS System.Collections.Generic.Dictionary<STRING, OBJECT>) AS VOID
+		oData := toData
+	END METHOD
+	
+	METHOD Get(tcKey AS STRING) AS OBJECT
+		IF oData:ContainsKey(LOWER(tcKey))
+			RETURN oData[LOWER(tcKey)]
+		ENDIF
+		RETURN ""
+	END METHOD
+	
+	METHOD GetByPattern(tcPattern AS STRING) AS OBJECT
+		RETURN .f.
+	END METHOD
+END CLASS

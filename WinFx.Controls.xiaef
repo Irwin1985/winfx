@@ -1,0 +1,1758 @@
+Application = WinFx.Controls
+IDEVersion = 2.22a
+GalleryName = 
+GalleryPage = 
+GalleryDefaultName = 
+Target = 2
+Platform = AnyCPU
+Language = XSharp
+Runtime = CLR4
+Dialect = Core
+Folder = %ProjectPath%\Applications\WinFx.Controls\
+PrgSubFolder = \Prg
+ResourcesSubFolder = \Resources
+Description = A collection of ActiveX controls from .NET to be used in VFP or others.
+NameSpace = 
+Assembly = WinFx.Controls
+Extension = 
+ApplicationIcon = 
+OutputFolder = 
+Frameworks = 1
+GUID = F518F1AF-6A8A-476C-A36D-21B0AB956C37
+IncludeInProjectBuild = 1
+IncludeInProjectSearch = 1
+IncludeInProjectExport = 1
+PostBuildEventExe = F:\Lenguajes\XIDE\Projects\register.bat
+BuildEventArgs = %OUTPUTFILE%
+BuildEventEnabled = 1
+BuildEventWait = 1
+BuildEventHidden = 0
+IncludePath = 
+StdDefsFile = 
+AppToRun = 
+SignAssembly = 0
+KeyFile = F:\Lenguajes\XIDE\Projects\WinFx\winfx.snk
+
+[ExportOptions]
+ExportResources = 0
+ExportImages = 0
+[WinFx.Controls FileGroups]
+FileFolder = WxTreeView
+FileGroupGUID = 8D1C89B4-59BE-4160-96AA-15D079C93726
+[WinFx.Controls Files]
+File = %AppPath%\Prg\ControlBase.prg
+FileGUID = 68CB6DB3-D59E-4291-95EC-BAD1D26F6F18
+FileType = Code
+CopyToBin = 0
+File = %AppPath%\Prg\Toolbar.prg
+FileGUID = 3F2F56E5-3E94-4EB1-B49E-3304CAFDB760
+FileType = Code
+DesignerFileGUID = 35C60EC6-94FD-4FA6-AE13-DE2560FCF05C
+CopyToBin = 0
+File = %AppPath%\Prg\AssemblyInfo.prg
+FileGUID = 00C10593-C253-45F8-ADC4-F5F4E3604BCE
+FileType = Code
+CopyToBin = 0
+File = %AppPath%\Prg\MenuBar.prg
+FileGUID = 8AA068AB-E7EB-42B0-95FF-DB35958393F3
+FileType = Code
+DesignerFileGUID = C25EEBCF-0F53-48F1-9F28-89B63731FB74
+CopyToBin = 0
+File = %AppPath%\Prg\Dialogs.prg
+FileGUID = D11D76B8-FB5B-4C88-A5CB-A1A625657642
+FileType = Code
+CopyToBin = 0
+File = %AppPath%\Prg\FileSystemWatcherControl.prg
+FileGUID = 34ED544B-EE7F-4905-A31F-D4229EC6264B
+FileType = Code
+DesignerFileGUID = 8DBCD41F-1D04-4134-8BA2-BD43395E0882
+CopyToBin = 0
+File = %AppPath%\Prg\WxTreeView\wxTreeView.prg
+FileGUID = 5804BEF8-E41F-4140-A1D9-F84574B026A3
+FileFileGroup = 8D1C89B4-59BE-4160-96AA-15D079C93726
+FileType = Code
+DesignerFileGUID = E2C1B28C-59FA-4FB5-BEDB-F708FF3CCE5B
+CopyToBin = 0
+File = %AppPath%\Prg\WxTreeView\ITreeViewEvents.prg
+FileGUID = 18BFABB7-D342-4581-AC57-24B5AAE3A58D
+FileFileGroup = 8D1C89B4-59BE-4160-96AA-15D079C93726
+FileType = Code
+CopyToBin = 0
+File = %AppPath%\Prg\WxTreeView\ITreeViewApi.prg
+FileGUID = AFF795DD-E501-4876-AB86-917E2D800CC2
+FileFileGroup = 8D1C89B4-59BE-4160-96AA-15D079C93726
+FileType = Code
+CopyToBin = 0
+File = %AppPath%\Prg\WxTreeView\NodeImageSizeEnum.prg
+FileGUID = 66EB35F1-595F-458C-94E0-A79E00440C2F
+FileFileGroup = 8D1C89B4-59BE-4160-96AA-15D079C93726
+FileType = Code
+CopyToBin = 0
+File = %AppPath%\Prg\WxTreeView\NodeActiveX.prg
+FileGUID = 6270DDC0-E1BE-43C7-B735-2AAEFD262D4D
+FileFileGroup = 8D1C89B4-59BE-4160-96AA-15D079C93726
+FileType = Code
+CopyToBin = 0
+File = %AppPath%\Prg\WxTreeView\wxTreeView.Private.prg
+FileGUID = 5E294E02-7E95-412B-9FFA-A5AFF2A39363
+FileFileGroup = 8D1C89B4-59BE-4160-96AA-15D079C93726
+FileType = Code
+CopyToBin = 0
+File = %AppPath%\Prg\WxTreeView\wxTreeView.Events.prg
+FileGUID = 07BF92AD-9854-4CCE-9822-37506EF3040B
+FileFileGroup = 8D1C89B4-59BE-4160-96AA-15D079C93726
+FileType = Code
+CopyToBin = 0
+File = %AppPath%\Prg\WxTreeView\CustomTreeNode.prg
+FileGUID = BABEA2EC-8F51-4B93-8AB7-68A965C4166A
+FileFileGroup = 8D1C89B4-59BE-4160-96AA-15D079C93726
+FileType = Code
+CopyToBin = 0
+[WinFx.Controls References]
+ReferenceGAC = CLR4,System,1,0,4.0.0.0
+ReferenceGAC = CLR4,System.Core,1,0,4.0.0.0
+ReferenceGAC = CLR4,System.Windows.Forms,1,0,4.0.0.0
+ReferenceGAC = CLR4,System.Drawing,1,0,4.0.0.0
+ReferenceGAC = CLR4,System.Data,1,0,4.0.0.0
+ReferenceGAC = CLR4,System.Xml,1,0,4.0.0.0
+ReferenceGAC = CLR4,System.Linq,1,0,4.0.0.0
+ReferenceGAC = CLR4,System.Data.DataSetExtensions,1,0,4.0.0.0
+[WinFx.Controls Resources]
+[WinFx.Controls Native Resources]
+[WinFx.Controls License files]
+[WinFx.Controls General Options]
+Switches=-nullable+
+ZeroArrays=1
+CaseSensitive=1
+ImplicitNamespace=0
+VO1=0
+VO2=0
+VO3=0
+VO4=0
+VO5=0
+VO6=0
+VO7=0
+VO8=0
+VO9=0
+VO10=0
+VO11=0
+VO12=0
+VO13=0
+VO14=0
+VO15=0
+VO16=0
+VO17=0
+FOX1=0
+FOX2=0
+XPP1=0
+LateBound=0
+Unsafe=0
+Undeclared=0
+EnforceSelf=0
+EnforceOverride=0
+UseNativeVersion=0
+MemVar=0
+IgnoreStdDefs=0
+Ovf=0
+FOvf=0
+ModernSyntax=1
+NamedArgs=0
+InitLocals=0
+AllowOldStyleAssignments=0
+AllowDotOption=0
+ResponseOnly=0
+[WinFx.Controls Configurations]
+AppConfig = Debug,11111111-1111-1111-1111-111111111111
+  Switches=
+  SwitchesCF=
+  CommandLine=
+  CommandLineCF=
+  Debug=1
+  DebugInit=1
+  DefineDebug=1
+  DefineTrace=0
+  SyntaxOnly=0
+  WarningsErrors=0
+  ForceConsole=0
+  ForceX86=0
+  Optimize=0
+AppConfig = Release,22222222-2222-2222-2222-222222222222
+  Switches=
+  SwitchesCF=
+  CommandLine=
+  CommandLineCF=
+  Debug=0
+  DebugInit=0
+  DefineDebug=0
+  DefineTrace=0
+  SyntaxOnly=0
+  WarningsErrors=0
+  ForceConsole=0
+  ForceX86=0
+  Optimize=0
+ENDApplication = WinFx.Controls
+
+[FileContents]
+%#IDE#%File=TEXT,68CB6DB3-D59E-4291-95EC-BAD1D26F6F18
+USING System.Text
+USING System.Windows.Forms
+USING System.Drawing
+USING System.Reflection
+USING Microsoft.Win32
+USING System.Runtime.InteropServices
+
+BEGIN NAMESPACE WinFx.Controls
+	[ComVisible(FALSE)];
+	PUBLIC PARTIAL CLASS ComUserControl INHERIT UserControl
+	
+		[ComRegisterFunction()];
+		PUBLIC STATIC METHOD RegisterClass(tcKey AS STRING) AS VOID
+			VAR loSb := StringBuilder{tcKey}
+			loSb:Replace("HKEY_CLASSES_ROOT\", "")
+			
+			VAR k := Registry.ClassesRoot:OpenSubKey(loSb:ToString(), TRUE)
+			VAR ctrl := k:CreateSubKey("Control")
+			ctrl:Close()
+			
+			VAR inprocServer32 := k:OpenSubKey("InprocServer32", TRUE)
+			inprocServer32:SetValue("CodeBase", Assembly.GetExecutingAssembly():CodeBase)
+			inprocServer32:Close()
+			
+			k:Close()
+		END METHOD
+		
+		[ComUnregisterFunction()];
+		PUBLIC STATIC METHOD UnregisterClass(tcKey AS STRING) AS VOID
+			VAR loSb := StringBuilder{tcKey}
+			loSb:Replace("HKEY_CLASSES_ROOT\", "")
+			
+			VAR k := Registry.ClassesRoot:OpenSubKey(loSb:ToString(), TRUE)
+			k:DeleteSubKey("Control", FALSE)
+			
+			k:OpenSubKey("InprocServer32", TRUE)
+			k:DeleteSubKey("CodeBase", FALSE)
+			
+			k:Close()
+		END METHOD
+	END CLASS
+END NAMESPACE
+%#IDE#%File=TEXT,3F2F56E5-3E94-4EB1-B49E-3304CAFDB760
+USING System
+USING System.Drawing
+USING System.Windows.Forms
+USING System.Runtime.InteropServices
+
+BEGIN NAMESPACE WinFx.Controls
+	[Guid("2cab1c1b-f9d9-4874-bee0-2eb7bd81e7f2")];
+	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)];
+	PUBLIC INTERFACE IToolbarEvents
+		[DispId(1)];
+		PUBLIC METHOD ButtonClick(tcButtonName AS STRING) AS VOID
+	END INTERFACE
+	
+	[Guid("13332842-095b-4f35-a7a4-b0cd52c32743")];
+	[ComSourceInterfaces(typeof(IToolbarEvents))];
+	[ClassInterface(ClassInterfaceType.None)];
+	PARTIAL CLASS WinFx.Controls.Toolbar INHERIT ComUserControl ;
+		IMPLEMENTS IToolbar
+		
+		CONSTRUCTOR()
+	
+			SUPER()
+	
+			SELF:InitializeForm()
+	
+		END CONSTRUCTOR
+		METHOD ToolStripButton_Click(sender AS System.Object , e AS System.EventArgs) AS VOID
+			IF ButtonClick != NULL
+				ButtonClick(((System.Windows.Forms.ToolStripButton)sender):Name)
+			ENDIF
+		END METHOD
+		
+		PUBLIC METHOD AddButton(tcName AS STRING, tcText AS STRING, tcImageFile AS STRING) AS ToolStripButton
+			VAR loNewButton := ToolStripButton{}
+			oToolStrip1:Items:Add(loNewButton)
+			loNewButton:DisplayStyle := ToolStripItemDisplayStyle.Image
+			loNewButton:Image := System.Drawing.Image.FromFile(tcImageFile)
+			loNewButton:ImageTransparentColor := System.Drawing.Color.White
+			loNewButton:Name := tcName
+			loNewButton:AutoSize := TRUE
+			loNewButton:Text := tcText
+			loNewButton:Click += System.EventHandler{ToolStripButton_Click}
+			RETURN loNewButton
+		END METHOD
+	
+	
+		PUBLIC DELEGATE ButtonClickEvent(tcButtonName AS STRING) AS VOID
+		EVENT ButtonClick AS ButtonClickEvent
+	END CLASS 
+	
+	PUBLIC INTERFACE IToolbar
+		METHOD AddButton(tcName AS STRING, tcText AS STRING, tcImageFile AS STRING) AS ToolStripButton
+	END INTERFACE
+END NAMESPACE
+%#IDE#%FileDesigner=TEXT,3F2F56E5-3E94-4EB1-B49E-3304CAFDB760
+DESIGNERSTART = Form,UserControl,Toolbar
+GUID=5503EBF8-FEC7-4824-8A0F-10DBA6156106
+Name=Toolbar
+Text=UserControl
+Location=100 , 100
+Size=210 , 26
+TabIndex=0
+Inherit=WinFx.Controls.ComUserControl
+ControlVisibility=Protect
+ControlPrefix=o
+CallPreResumeLayout=No
+CallSuperInitialize=No
+UseGrid=Yes
+GridX=8
+GridY=8
+SUBCONTROLSSTART
+  
+  CONTROL=System.Windows.Forms.ToolStrip
+  GUID=FD2D8D00-77BA-4936-BD00-8CF5B8B603F7
+  Name=ToolStrip1
+  Location=0 , 0
+  Size=210 , 26
+  TabIndex=0
+  Dock=Fill
+
+SUBCONTROLSEND
+DESIGNEREND = Toolbar
+
+
+DESIGNERSTART = ToolStrip,ToolStrip,ToolStrip1
+GUID=FD2D8D00-77BA-4936-BD00-8CF5B8B603F7
+BOUNDTOFORM=1
+Name=ToolStrip1
+DESIGNEREND = ToolStrip1
+
+%#IDE#%File=TEXT,35C60EC6-94FD-4FA6-AE13-DE2560FCF05C
+BEGIN NAMESPACE WinFx.Controls
+	PARTIAL CLASS WinFx.Controls.Toolbar INHERIT ComUserControl
+	
+		PROTECT oToolStrip1 AS System.Windows.Forms.ToolStrip
+		// User code starts here (DO NOT remove this line)  ##USER##
+		METHOD InitializeForm() AS VOID
+		
+		// IDE generated code (please DO NOT modify)
+		
+			SELF:oToolStrip1 := System.Windows.Forms.ToolStrip{}
+	
+			SELF:SuspendLayout()
+	
+			SELF:Location := System.Drawing.Point{100 , 100}
+			SELF:Name := "Toolbar"
+			SELF:Size := System.Drawing.Size{210 , 26}
+			SELF:TabIndex := 0
+			SELF:Text := "UserControl"
+	
+	
+			SELF:oToolStrip1:Name := "ToolStrip1"
+			SELF:oToolStrip1:Dock := System.Windows.Forms.DockStyle.Fill
+			SELF:oToolStrip1:Location := System.Drawing.Point{0 , 0}
+			SELF:oToolStrip1:Name := "ToolStrip1"
+			SELF:oToolStrip1:Size := System.Drawing.Size{210 , 26}
+			SELF:oToolStrip1:TabIndex := 0
+			SELF:Controls:Add(SELF:oToolStrip1)
+			
+			SELF:ResumeLayout()
+	
+		END METHOD
+	
+	END CLASS
+END NAMESPACE
+%#IDE#%File=TEXT,00C10593-C253-45F8-ADC4-F5F4E3604BCE
+#using System.Reflection
+#using System.Runtime.InteropServices
+
+[assembly: AssemblyTitleAttribute( "WindowsFormsApplication2" )]
+[assembly: AssemblyDescriptionAttribute( "" )]
+[assembly: AssemblyConfigurationAttribute( "" )]
+[assembly: AssemblyCompanyAttribute( "" )]
+[assembly: AssemblyProductAttribute( "WindowsFormsApplication2" )]
+[assembly: AssemblyCopyrightAttribute( "Copyright © " )]
+[assembly: AssemblyTrademarkAttribute( "" )]
+[assembly: AssemblyCultureAttribute( "" )]
+
+[assembly: AssemblyVersionAttribute( "1.0.*" )]
+[assembly: AssemblyFileVersionAttribute( "1.0.*" )]
+[assembly: AssemblyInformationalVersionAttribute( "1.0.*" )]
+[assembly: ComVisible(TRUE)]
+%#IDE#%File=TEXT,8AA068AB-E7EB-42B0-95FF-DB35958393F3
+USING System
+USING System.Drawing
+USING System.Windows.Forms
+USING System.Runtime.InteropServices
+
+BEGIN NAMESPACE WinFx.Controls
+	[Guid("bb0fda05-3d85-428f-8797-3d4f50b2523d")]; 
+	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)];
+	PUBLIC INTERFACE IMenuBarEvents
+		[DispId(1)];
+		PUBLIC METHOD ItemClick(tcItemName AS STRING) AS VOID
+	END INTERFACE
+	
+	[Guid("9204b904-b919-4ddf-9690-0a7b42f57b0c")];
+	[ComSourceInterfaces(typeof(IMenuBarEvents))];
+	[ClassInterface(ClassInterfaceType.None)];
+	PARTIAL CLASS WinFx.Controls.MenuBar INHERIT ComUserControl IMPLEMENTS IMenuBar
+		CONSTRUCTOR()
+			SUPER()
+			SELF:InitializeForm()
+		END CONSTRUCTOR
+		
+		PUBLIC METHOD MenuItem_Click(sender AS OBJECT, e AS EventArgs) AS VOID
+			IF ItemClick != NULL
+				ItemClick(((ToolStripMenuItem)sender):Name)
+			ENDIF
+		END METHOD  
+		
+		PUBLIC METHOD AddPad(tcName AS STRING, tcText AS STRING, tcShorcutKey AS STRING) AS ToolStripMenuItem
+			VAR loNewItem := ToolStripMenuItem{}
+			oMenuStrip1:Items:Add(loNewItem)
+			
+			WITH loNewItem
+				:Name := tcName
+				:AutoSize := TRUE
+				:Text := tcText
+				IF tcShorcutKey != ""
+					VAR lcKey := tcShorcutKey:ToUpper():ToCharArray()[1]
+					loNewItem:ShortcutKeys := ((Keys)((Keys.Alt | (Keys)(BYTE)lcKey)))
+				ENDIF
+			END WITH
+			RETURN loNewItem
+		END METHOD
+		
+		PUBLIC METHOD AddBar(toMenuPad AS ToolStripMenuItem, tcName AS STRING, tcText AS STRING, tcShorcutKey AS STRING, tcImageFile AS STRING) AS ToolStripMenuItem
+			VAR loNewBar := ToolStripMenuItem{}
+			toMenuPad:DropDownItems:Add(loNewBar)
+			WITH loNewBar
+				:Name := tcName
+				:AutoSize := TRUE
+				:Text := tcText
+				:Click += EventHandler{MenuItem_Click}
+				IF tcImageFile != ""
+					:Image := Image.FromFile(tcImageFile)
+					:ImageTransparentColor := Color.White
+				ENDIF
+				IF tcShorcutKey != ""
+					VAR lcKey := tcShorcutKey:ToUpper():ToCharArray()[1]
+					:ShortcutKeys := ((Keys)((Keys.Control | (Keys)(BYTE)lcKey)))
+				ENDIF
+			END WITH
+			RETURN loNewBar
+		END METHOD
+		
+		PUBLIC DELEGATE ItemClickEventHandler(tcItemName AS STRING) AS VOID
+		PUBLIC EVENT ItemClick AS ItemClickEventHandler 	
+	END CLASS
+	
+	PUBLIC INTERFACE IMenuBar
+		PUBLIC METHOD AddPad(tcName AS STRING, tcText AS STRING, tcShorcutKey AS STRING) AS ToolStripMenuItem
+		PUBLIC METHOD AddBar(toMenuPad AS ToolStripMenuItem, tcName AS STRING, tcText AS STRING, tcShorcutKey AS STRING, tcImageFile AS STRING) AS ToolStripMenuItem
+	END INTERFACE
+END NAMESPACE
+%#IDE#%FileDesigner=TEXT,8AA068AB-E7EB-42B0-95FF-DB35958393F3
+DESIGNERSTART = Form,UserControl,MenuBar
+GUID=D09DBFC4-C676-4A22-8896-54B3D01C2235
+Name=MenuBar
+Text=UserControl
+Location=100 , 100
+Size=150 , 150
+TabIndex=0
+Inherit=WinFx.Controls.ComUserControl
+ControlVisibility=Protect
+ControlPrefix=o
+CallPreResumeLayout=No
+CallSuperInitialize=No
+UseGrid=Yes
+GridX=8
+GridY=8
+SUBCONTROLSSTART
+  
+  CONTROL=System.Windows.Forms.MenuStrip
+  GUID=D3219C7F-4714-454C-B9EE-D8D866E8A1CC
+  Name=MenuStrip1
+  Location=0 , 0
+  Size=150 , 24
+  TabIndex=0
+
+SUBCONTROLSEND
+DESIGNEREND = MenuBar
+
+
+DESIGNERSTART = ToolStrip,MenuStrip,MenuStrip1
+GUID=D3219C7F-4714-454C-B9EE-D8D866E8A1CC
+BOUNDTOFORM=1
+Name=MenuStrip1
+DESIGNEREND = MenuStrip1
+
+%#IDE#%File=TEXT,C25EEBCF-0F53-48F1-9F28-89B63731FB74
+BEGIN NAMESPACE WinFx.Controls
+	PARTIAL CLASS WinFx.Controls.MenuBar INHERIT ComUserControl
+	
+		PUBLIC oMenuStrip1 AS System.Windows.Forms.MenuStrip
+		// User code starts here (DO NOT remove this line)  ##USER##
+		METHOD InitializeForm() AS VOID
+		
+		// IDE generated code (please DO NOT modify)
+		
+			SELF:oMenuStrip1 := System.Windows.Forms.MenuStrip{}
+	
+			SELF:SuspendLayout()
+	
+			SELF:Location := System.Drawing.Point{100 , 100}
+			SELF:Name := "MenuBar"
+			SELF:Size := System.Drawing.Size{150 , 150}
+			SELF:TabIndex := 0
+			SELF:Text := "UserControl"
+	
+	
+			SELF:oMenuStrip1:Name := "MenuStrip1"
+			SELF:oMenuStrip1:Location := System.Drawing.Point{0 , 0}
+			SELF:oMenuStrip1:Name := "MenuStrip1"
+			SELF:oMenuStrip1:Size := System.Drawing.Size{150 , 24}
+			SELF:oMenuStrip1:TabIndex := 0
+			SELF:Controls:Add(SELF:oMenuStrip1)
+			
+			SELF:ResumeLayout()
+	
+		END METHOD
+	
+	END CLASS
+END NAMESPACE
+%#IDE#%File=TEXT,D11D76B8-FB5B-4C88-A5CB-A1A625657642
+USING System.Windows.Forms
+USING System.Runtime.InteropServices
+
+BEGIN NAMESPACE WinFx.Controls
+	[Guid("15b37d96-6b92-4bce-a32b-03ccf6472537")];
+	[ClassInterface(ClassInterfaceType.None)];
+	[ProgId("WinFx.Controls.Dialogs")];
+	PUBLIC CLASS WinFx.Controls.Dialogs INHERIT ComUserControl IMPLEMENTS IDialogs
+		PROPERTY DefaultExt AS STRING AUTO
+		PROPERTY FileName AS STRING AUTO
+		PROPERTY InitialDir AS STRING AUTO
+		PROPERTY Title AS STRING AUTO
+		PROPERTY Filter AS STRING AUTO
+		PROPERTY FilterIndex AS INT AUTO
+			
+		PUBLIC METHOD ShowOpenDialog AS STRING
+			VAR loDialog := OpenFileDialog{}
+			WITH loDialog
+				:FileName := SELF:FileName
+				:DefaultExt := SELF:DefaultExt
+				:InitialDirectory := SELF:InitialDir
+				:Title := SELF:Title
+				:Filter := SELF:Filter
+				:FilterIndex := SELF:FilterIndex
+				
+				IF :ShowDialog() == DialogResult.OK
+					RETURN :FileName
+				ENDIF
+			END WITH
+			RETURN ""
+		END METHOD
+
+		PUBLIC METHOD ShowSaveDialog AS STRING
+			VAR loDialog := SaveFileDialog{}
+			WITH loDialog
+				:FileName := SELF:FileName
+				:DefaultExt := SELF:DefaultExt
+				:InitialDirectory := SELF:InitialDir
+				:Title := SELF:Title
+				:Filter := SELF:Filter
+				:FilterIndex := SELF:FilterIndex
+				IF :ShowDialog() == DialogResult.OK
+					RETURN :FileName
+				ENDIF
+			END WITH 
+			RETURN ""
+		END METHOD
+	
+	END CLASS
+	
+	PUBLIC INTERFACE IDialogs
+		PROPERTY DefaultExt AS STRING AUTO
+		PROPERTY FileName AS STRING AUTO
+		PROPERTY InitialDir AS STRING AUTO
+		PROPERTY Title AS STRING AUTO
+		PROPERTY Filter AS STRING AUTO
+		PROPERTY FilterIndex AS INT AUTO
+		
+		METHOD ShowOpenDialog AS STRING
+		METHOD ShowSaveDialog AS STRING
+	END INTERFACE
+
+END NAMESPACE
+%#IDE#%File=TEXT,34ED544B-EE7F-4905-A31F-D4229EC6264B
+Using System
+Using System.IO
+Using System.Runtime.InteropServices
+Using System.Windows.Forms
+
+Begin NameSpace WinFx.Controls
+
+	[Guid("3D5BBEA3-89EA-4696-A13F-CD66973E7E78")];
+	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)];
+	Public Interface IFileSystemWatcherEvents
+		[DispId(1)];
+		Public Method OnChanged(tcFullPath As String, tnChangeType As Int) As Void
+		[DispId(2)];
+		Public Method OnRenamed(tcOldFile As String, tcNewFile As String) As Void
+	End Interface
+
+
+	[Guid("BF46A1DB-18F7-4709-A90B-B1277CE9875B")];
+	[ComSourceInterfaces(typeof(IFileSystemWatcherEvents))];
+	[ClassInterface(ClassInterfaceType.None)];
+	Partial Class FileSystemWatcherControl Inherit System.Windows.Forms.UserControl ;
+		Implements IFileSystemWatcherImplementation
+
+		Private oFsw As FileSystemWatcher
+
+		Constructor()
+
+			Super()
+
+			Self:InitializeForm()
+
+		End Constructor
+
+		Method OnChanged(sender As Object, e As FileSystemEventArgs) As Void
+			If OnChangedEvent != Null
+				OnChangedEvent(e:FullPath, (Int)e:ChangeType)
+			EndIf
+		End Method
+
+		Method OnRenamed(sender As Object, e As RenamedEventArgs) As Void
+			If OnRenamedEvent != Null
+				OnRenamedEvent(e:OldFullPath, e:FullPath)
+			EndIf
+		End Method
+
+		Public Method StartMonitoring(tcPath As String) As Void
+			Self:oFsw := FileSystemWatcher{}
+			With Self:oFsw
+				:Path := tcPath
+				:NotifyFilter := NotifyFilters.FileName | NotifyFilters.DirectoryName | NotifyFilters.LastWrite | NotifyFilters.LastAccess
+				:Filter := "*.*"
+				:Changed += Self:OnChanged
+				:Created += Self:OnChanged
+				:Deleted += Self:OnChanged
+				:Renamed += Self:OnRenamed
+			End With
+			Self:oFsw:EnableRaisingEvents := True
+		End Method
+
+		Delegate OnChangedDelegate(tcFullPath As String, tnChangeType As Int) As Void
+		Event OnChangedEvent As OnChangedDelegate
+		Delegate OnRenamedDelegate(tcOldFile As String, tcNewFile As String) As Void
+		Event OnRenamedEvent As OnRenamedDelegate
+	End Class
+
+	Public Interface IFileSystemWatcherImplementation
+		 Public Method OnChanged(sender As Object, e As System.IO.FileSystemEventArgs) As Void
+		 Public Method OnRenamed(sender As Object, e As System.IO.RenamedEventArgs) As Void
+		 Public Method StartMonitoring(tcPath As String) As Void
+	End Interface
+End NameSpace
+%#IDE#%FileDesigner=TEXT,34ED544B-EE7F-4905-A31F-D4229EC6264B
+DESIGNERSTART = Form,UserControl,FileSystemWatcherControl
+GUID=5026C880-1F20-4DD2-9368-EB2A3E04BF06
+Name=FileSystemWatcherControl
+Text=UserControl
+Location=100 , 100
+Size=150 , 26
+TabIndex=0
+Visible=False
+ControlVisibility=Protect
+ControlPrefix=o
+CallPreResumeLayout=No
+CallSuperInitialize=No
+UseGrid=Yes
+GridX=8
+GridY=8
+SUBCONTROLSSTART
+  
+  CONTROL=System.Windows.Forms.Label
+  GUID=13CAF665-0495-4831-AA8F-69F8D6CFFF7D
+  Name=Label1
+  Text=WinFx.FileSystemWatcher
+  Location=0 , 0
+  Size=150 , 26
+  TabIndex=0
+  TextAlign=MiddleCenter
+  Visible=False
+  Dock=Fill
+
+SUBCONTROLSEND
+DESIGNEREND = FileSystemWatcherControl
+
+
+%#IDE#%File=TEXT,8DBCD41F-1D04-4134-8BA2-BD43395E0882
+USING System.IO
+BEGIN NAMESPACE WinFx.Controls
+PARTIAL CLASS FileSystemWatcherControl INHERIT System.Windows.Forms.UserControl
+
+	PROTECT oLabel1 AS System.Windows.Forms.Label
+	// User code starts here (DO NOT remove this line)  ##USER##
+		METHOD InitializeForm() AS VOID
+	
+	// IDE generated code (please DO NOT modify)
+	
+		SELF:oLabel1 := System.Windows.Forms.Label{}
+
+		SELF:SuspendLayout()
+
+		SELF:Location := System.Drawing.Point{100 , 100}
+		SELF:Name := "FileSystemWatcherControl"
+		SELF:Size := System.Drawing.Size{150 , 26}
+		SELF:TabIndex := 0
+		SELF:Text := "UserControl"
+		SELF:Visible := FALSE
+
+		SELF:oLabel1:Dock := System.Windows.Forms.DockStyle.Fill
+		SELF:oLabel1:Location := System.Drawing.Point{0 , 0}
+		SELF:oLabel1:Name := "Label1"
+		SELF:oLabel1:Size := System.Drawing.Size{150 , 26}
+		SELF:oLabel1:TabIndex := 0
+		SELF:oLabel1:Text := "WinFx.FileSystemWatcher"
+		SELF:oLabel1:TextAlign := System.Drawing.ContentAlignment.MiddleCenter
+		SELF:oLabel1:Visible := FALSE
+		SELF:Controls:Add(SELF:oLabel1)
+		
+		SELF:ResumeLayout()
+
+	END METHOD
+
+	END CLASS
+END NAMESPACE
+%#IDE#%File=TEXT,5804BEF8-E41F-4140-A1D9-F84574B026A3
+// Application : WinFx.Controls
+// wxTreeView.prg , Created : 9/2/2025   10:48
+// User : irwin
+Using System
+Using System.Collections.Generic
+Using System.Data
+Using System.Data.DataSetExtensions
+Using System.Drawing
+Using System.Linq
+Using System.IO
+Using System.Runtime.InteropServices
+Using System.Text
+Using System.Windows.Forms
+Using System.ComponentModel
+
+Begin NameSpace WinFx.Controls.WxTreeView
+
+	[Guid("f0d6fc29-236b-45b7-a380-6cc60be298a9")];
+	[ProgId("WinFx.Controls.TreeView")];
+	[ClassInterface(ClassInterfaceType.None)];
+	[ComSourceInterfaces(TypeOf(ITreeViewEvents))];
+	Partial Class wxTreeView Inherit System.Windows.Forms.UserControl Implements ITreeNodeApi, IDisposable
+		Private _font := Dictionary<String, Font>{} As Dictionary<String, Font>
+		Private _nodes := Dictionary<String, TreeNode>{} As Dictionary<String, TreeNode>
+		Private _images := Dictionary<String, Image>{} As Dictionary<String, Image>
+
+		Public Property CheckBoxes As Logic
+			Get
+				Return Self:oTreeView1:CheckBoxes
+			End Get
+			Set
+				Self:oTreeView1:CheckBoxes := value
+			End Set
+		End Property
+
+		Public Property SelectedNode As NodeActiveX
+			Get
+				If Self:oTreeView1:SelectedNode != Null
+					Var selNode := Self:oTreeView1:SelectedNode
+					Return (NodeActiveX)selNode:Tag
+				EndIf
+				Return Null
+			End Get
+			[ReadOnly(True)];
+			Set
+			End Set
+		End Property
+
+		Public Property CheckInCascade As Logic Auto
+
+		Private _imageSize As NodeImageSize
+		Property ImageSize As NodeImageSize
+			Get
+				Return Self:_imageSize
+			End Get
+			Set
+				Self:_imageSize := value
+			End Set
+		End Property
+
+		Private _tooltip As Logic
+		Property ToolTipText As Logic
+			Get
+				Return _tooltip
+			End Get
+			Set
+				_tooltip := value
+				Self:oTreeView1:ShowNodeToolTips := True
+			End Set
+		End Property
+
+		Private _nodeList := List<NodeActiveX>{} As List<NodeActiveX>
+		Property Nodes As NodeActiveX[]
+			Get
+				Return Self:_nodes:Select({n => (NodeActiveX)n:Value:Tag}):ToArray()
+			End Get
+			[ReadOnly(True)];
+			Set
+			End Set
+		End Property
+
+		Property Count As Int
+			Get
+				Return Self:_nodes:Count
+			End Get
+			[ReadOnly(True)];
+			Set
+			End Set
+		End Property
+
+		Constructor
+			Self:InitializeForm()
+
+			Self:oTreeView1:NodeMouseDoubleClick += Self:OnTreeView_NodeMouseDoubleClick
+			Self:oTreeView1:NodeMouseClick += Self:OnTreeview_NodeMouseClick
+			Self:oTreeView1:AfterCheck += Self:OnTreeview_AfterCheck
+			Self:oTreeView1:AfterSelect += Self:OnTreeview_AfterSelect
+			Self:_imageSize := NodeImageSize.Small
+
+			Self:oTreeView1:BeforeCollapse += Self:OnTreeview_BeforeCollapse
+			Self:oTreeView1:AfterCollapse += Self:OnTreeview_AfterCollapse
+
+			Self:oTreeView1:BeforeExpand += Self:OnTreeview_BeforeExpand
+			Self:oTreeView1:AfterExpand += Self:OnTreeview_AfterExpand
+
+		End Constructor
+
+		// ---------------------------------------------------------------------------- //
+		// Implementación de la API
+		// ---------------------------------------------------------------------------- //
+		Method RemoveNode(id As String) As Void
+			Var oNode := Self:FindNodeById(Self:oTreeView1:Nodes, id)
+			If oNode != Null
+				Self:oTreeView1:Nodes:Remove(oNode)
+			EndIf
+		End Method
+
+		Method UpdateNode(id As String, newText As String) As Void
+			Var oNode := Self:FindNodeById(Self:oTreeView1:Nodes, id)
+			If oNode != Null
+				oNode:Text := newText
+			EndIf
+		End Method
+
+		Method ExpandNode(id As String) As Void
+			Var oNode := Self:FindNodeById(Self:oTreeView1:Nodes, id)
+			If oNode != Null
+				oNode:Expand()
+			EndIf
+		End Method
+
+		Method CollapseNode(id As String) As Void
+			Var oNode := Self:FindNodeById(Self:oTreeView1:Nodes, id)
+			If oNode != Null
+				oNode:Collapse()
+			EndIf
+		End Method
+
+		Method GetNodeText(id As String) As String
+			Var oNode := Self:FindNodeById(Self:oTreeView1:Nodes, id)
+			If oNode != Null
+				Return oNode:Text
+			EndIf
+			Return String.Empty
+		End Method
+
+		Method ExpandAll As Void
+			Self:oTreeView1:ExpandAll()
+			Self:ExpandAllWithImages(Self:oTreeView1:Nodes)
+		End Method
+
+		Method CollapseAll As Void
+			Self:oTreeView1:CollapseAll()
+			Self:CollapseAllWithImages(Self:oTreeView1:Nodes)
+		End Method
+
+		Method Close As Void
+			Self:Dispose()
+		End Method
+
+		Method GetCheckedNodes As NodeActiveX[]
+			If !Self:oTreeView1:CheckBoxes
+				Return Null
+			EndIf
+
+			Var oList := List<NodeActiveX>{}
+
+			ForEach oNode As TreeNode In Self:oTreeView1:Nodes
+				Self:GetCheckedNodesRecursive(oNode, oList)
+			Next
+
+			Return oList:ToArray()
+		End Method
+
+		Method CheckAll(check As Logic) As Void
+			ForEach node As TreeNode In Self:oTreeView1:Nodes
+				node:Checked := check
+				Self:CheckChildNodes(node, check)
+			Next
+		End Method
+
+		Method LoadFromXML(tcXML As String) As Void
+			Try
+				Self:_font   := Dictionary<String, Font>{}
+				Var oDataSet := DataSet{}
+				Using Var oReader := StringReader{tcXML}
+				oDataSet:ReadXml(oReader)
+				Var oDataTable  := oDataSet:Tables[0]
+				Var oRows 		:= oDataTable:AsEnumerable()
+
+				// Validar las columnas obligatorias
+				Var oRequiredColumns := <String>{"key", "parent", "text"}
+				If !oRequiredColumns:All({col => oDataTable:Columns:Contains(col)})
+					MessageBox.Show("El XML no tiene las columnas obligatorias(key, parent, text)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+					Return
+				EndIf
+
+				Self:_nodes:Clear()
+				// Vacíar el treeview
+				Self:oTreeView1:Nodes:Clear()
+
+				// Inicializar las imágenes
+				Self:_images := Dictionary<String, Image>{}
+				Self:oTreeView1:ImageList := ImageList{}
+				Var size := (Int)Self:_imageSize
+				Self:oTreeView1:ImageList:ImageSize := Size{size, size}
+
+				Var key 			:= ""
+				Var parentKey 		:= ""
+				Var lcText 			:= ""
+				Var openImgPath 	:= ""
+				Var closeImgPath 	:= ""
+				Var toolTipText 	:= ""
+				Local oForeColor 	:= Null As Color?
+				Local oFont 		:= Null As Font?
+
+				ForEach row As DataRow In oRows
+					key := row["key"]:ToString():Trim():ToLower()
+					parentKey := row["parent"]:ToString():Trim()
+
+					openImgPath 	:= ""
+					closeImgPath 	:= ""
+					toolTipText 	:= ""
+					oForeColor 		:= Null
+					oFont 			:= Null
+					lcText 			:= row["text"]:ToString():Trim()
+
+					If row:Table:Columns:Contains("openimg")
+						openImgPath := row["openimg"]:ToString():Trim():ToLower()
+					EndIf
+
+					If row:Table:Columns:Contains("closeimg")
+						closeImgPath := row["closeimg"]:ToString():Trim():ToLower()
+					EndIf
+
+					If !String.IsNullOrEmpty(openImgPath) && File.Exists(openImgPath)
+						openImgPath := Self:LoadImage(openImgPath)
+					EndIf
+
+					If !String.IsNullOrEmpty(closeImgPath) && File.Exists(closeImgPath)
+						closeImgPath := Self:LoadImage(closeImgPath)
+					EndIf
+
+					If row:Table:Columns:Contains("tooltip")
+						toolTipText := row["tooltip"]:ToString():Trim()
+					EndIf
+
+					If row:Table:Columns:Contains("color")
+						oForeColor := Self:ParseRGBColor(row["color"]:ToString():Trim())
+					EndIf
+
+					If row:Table:Columns:Contains("font") && !String.IsNullOrEmpty(row["font"]:ToString():Trim())
+						oFont := Self:ParseFont(row["font"]:ToString():Trim())
+					EndIf
+
+					// Builder del NodeActiveX
+					Var oNodeActiveXBuilder := NodeActiveX.Builder{}
+					With oNodeActiveXBuilder
+						:WithKey(key)
+						:WithCaption(lcText)
+						:WithExpandedImageKey(openImgPath)
+						:WithCollapsedImageKey(closeImgPath)
+					End With
+					Var oNodeActiveX := oNodeActiveXBuilder:Build()
+
+					// Build the TreeNode
+					Var oTreeNodeBuilder := CustomTreeNode.Builder{}
+					With oTreeNodeBuilder
+						:WithKey(key)
+						:WithText(lcText)
+						:WithTag(oNodeActiveX)
+						:WithToolTipText(toolTipText)
+						:WithForeColor(oForeColor)
+						:WithFont(oFont)
+					End With
+					Var oTreeNode := oTreeNodeBuilder:Build()
+
+					If parentKey == "0_" || String.IsNullOrEmpty(parentKey)
+						Self:oTreeView1:Nodes:Add(oTreeNode)
+					Else
+						If Self:_nodes:TryGetValue(parentKey, Out oParentNode As TreeNode)
+							oParentNode:Nodes:Add(oTreeNode)
+						Else
+							Self:oTreeView1:Nodes:Add(oTreeNode)
+						EndIf
+					EndIf
+					Self:_nodes:Add(key, oTreeNode)
+				Next
+			Catch To loEx As Exception
+				MessageBox.Show(i"Error en método LoadFromXML(): {loEx:Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+			End Try
+		End Method
+
+		Method AddNode(;
+						key As String, ;
+						caption As String, ;
+						padre := Null As Object, ;
+						imagePathExpanded := "" As String, ;
+						imagePathCollapsed := "" As String, ;
+						toolTipText := "" As String, ;
+						foreColor := "" As String, ;
+						font := "" As String ;
+						) As TreeNode
+			Try
+				// Validar las columnas obligatorias
+				If key == "" || caption == ""
+					MessageBox.Show("Los parámetros key y caption son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+					Return Null
+				EndIf
+
+				Self:_nodes:Clear()
+
+				// Crear la colección de imagenes
+				If Self:oTreeView1:ImageList == Null
+					Self:oTreeView1:ImageList := ImageList{}
+					Var size := (Int)Self:_imageSize
+					Self:oTreeView1:ImageList:ImageSize := Size{size, size}
+				EndIf
+				Local oForeColor := Null As Color?
+				Local oFont := Null As Font?
+
+				If !String.IsNullOrEmpty(imagePathExpanded) && File.Exists(imagePathExpanded)
+					Self:LoadImage(imagePathExpanded:Trim():ToLower())
+				EndIf
+
+				If !String.IsNullOrEmpty(imagePathCollapsed) && File.Exists(imagePathCollapsed)
+					Self:LoadImage(imagePathCollapsed:Trim():ToLower())
+				EndIf
+
+				If foreColor != ""
+					oForeColor := Self:ParseRGBColor(foreColor:Trim())
+				EndIf
+
+				If font != ""
+					oFont := Self:ParseFont(font:Trim())
+				EndIf
+
+				// Builder del NodeActiveX
+				Var oNodeActiveXBuilder := NodeActiveX.Builder{}
+				With oNodeActiveXBuilder
+					:WithKey(key)
+					:WithCaption(caption)
+					:WithExpandedImageKey(imagePathExpanded:Trim():ToLower())
+					:WithCollapsedImageKey(imagePathCollapsed:Trim():ToLower())
+				End With
+				Var oNodeActiveX := oNodeActiveXBuilder:Build()
+
+				// Build the TreeNode
+				Var oTreeNodeBuilder := CustomTreeNode.Builder{}
+				With oTreeNodeBuilder
+					:WithKey(key)
+					:WithText(caption)
+					:WithTag(oNodeActiveX)
+					:WithToolTipText(toolTipText)
+					:WithForeColor(oForeColor)
+					:WithFont(oFont)
+				End With
+				Var oTreeNode := oTreeNodeBuilder:Build()
+
+				If padre == Null || padre == System.DBNull.Value
+					Self:oTreeView1:Nodes:Add(oTreeNode)
+				Else
+					((TreeNode)padre):Nodes:Add(oTreeNode)
+				EndIf
+
+				Self:_nodes:Add(key, oTreeNode)
+
+				Return oTreeNode
+			Catch To loEx As Exception
+				MessageBox.Show(i"Error en método LoadFromXML(): {loEx:Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+			End Try
+
+			Return Null
+		End Method
+
+		Method Clear As Void
+			If Self:oTreeView1:Nodes:Count > 0
+				Self:oTreeView1:Nodes:Clear()
+			EndIf
+		End Method
+
+		Method FindNode(tcKey As String, tbSearchAllChildren := True As Logic) As NodeActiveX
+			If Self:_nodes:ContainsKey(tcKey:ToLower())
+				Return (NodeActiveX)Self:_nodes[tcKey:ToLower()]:Tag
+			EndIf
+			Return Null
+		End Method
+
+		Delegate OnNodeDblClickDelegate(node As NodeActiveX) As Void
+		Delegate OnNodeClickDelegate(node As NodeActiveX) As Void
+		Delegate OnNodeAfterSelectDelegate(node As NodeActiveX) As Void
+		Delegate OnNodeBeforeExpandDelegate(node As NodeActiveX) As Void
+		Delegate OnNodeAfterExpandDelegate(node As NodeActiveX) As Void
+		Delegate OnNodeBeforeCollapseDelegate(node As NodeActiveX) As Void
+		Delegate OnNodeAfterCollapseDelegate(node As NodeActiveX) As Void
+
+		Event OnNodeDblClick As OnNodeDblClickDelegate
+		Event OnNodeClick As OnNodeClickDelegate
+		Event OnNodeAfterSelect As OnNodeAfterSelectDelegate
+		Event OnNodeBeforeExpand As OnNodeBeforeExpandDelegate
+		Event OnNodeAfterExpand As OnNodeAfterExpandDelegate
+		Event OnNodeBeforeCollapse As OnNodeBeforeCollapseDelegate
+		Event OnNodeAfterCollapse As OnNodeAfterCollapseDelegate
+	End Class
+End NameSpace
+%#IDE#%FileDesigner=TEXT,5804BEF8-E41F-4140-A1D9-F84574B026A3
+DESIGNERSTART = Form,UserControl,wxTreeView
+GUID=B7F7CA8C-391A-47EB-8948-414051A2FD62
+Name=wxTreeView
+Text=UserControl
+Location=100 , 100
+Size=226 , 298
+TabIndex=0
+ControlVisibility=Protect
+ControlPrefix=o
+CallPreResumeLayout=No
+CallSuperInitialize=No
+UseGrid=Yes
+GridX=8
+GridY=8
+SUBCONTROLSSTART
+  
+  CONTROL=System.Windows.Forms.TreeView
+  GUID=880EF5C2-E0A0-4E77-8CEB-2D37FBC59B7B
+  CheckBoxes=False
+  Name=TreeView1
+  Location=0 , 0
+  Size=226 , 298
+  TabIndex=0
+  Dock=Fill
+
+SUBCONTROLSEND
+DESIGNEREND = wxTreeView
+
+
+%#IDE#%File=TEXT,E2C1B28C-59FA-4FB5-BEDB-F708FF3CCE5B
+Begin NameSpace WinFx.Controls.WxTreeView
+Partial Class wxTreeView Inherit System.Windows.Forms.UserControl
+
+	Protect oTreeView1 As System.Windows.Forms.TreeView
+	// User code starts here (DO NOT remove this line)  ##USER##
+		Method InitializeForm() As Void
+
+	// IDE generated code (please DO NOT modify)
+
+		Self:oTreeView1 := System.Windows.Forms.TreeView{}
+
+		Self:SuspendLayout()
+
+		Self:Location := System.Drawing.Point{100 , 100}
+		Self:Name := "wxTreeView"
+		Self:Size := System.Drawing.Size{226 , 298}
+		Self:TabIndex := 0
+		Self:Text := "UserControl"
+
+		Self:oTreeView1:CheckBoxes := False
+		Self:oTreeView1:Dock := System.Windows.Forms.DockStyle.Fill
+		Self:oTreeView1:Location := System.Drawing.Point{0 , 0}
+		Self:oTreeView1:Name := "TreeView1"
+		Self:oTreeView1:Size := System.Drawing.Size{226 , 298}
+		Self:oTreeView1:TabIndex := 0
+		Self:Controls:Add(Self:oTreeView1)
+
+		Self:ResumeLayout()
+
+	End Method
+
+	End Class
+End NameSpace
+%#IDE#%File=TEXT,18BFABB7-D342-4581-AC57-24B5AAE3A58D
+// Application : WinFx.Controls
+// ITreeViewEvents.prg , Created : 13/2/2025   13:54
+// Interface para exponer en el COM
+
+Using System.ComponentModel
+Using System.Runtime.InteropServices
+
+Begin NameSpace WinFx.Controls.WxTreeView
+	[Guid("fa60cc69-eaab-428d-8775-b57180019579")];
+	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)];
+	Interface ITreeViewEvents
+		[DispId(1)];
+		[Description("Ocurre cuando se hace un doble clic sobre el nodo.")];
+		Method OnNodeDblClick(node As NodeActiveX) As Void
+
+		[DispId(2)];
+		[Description("Ocurre cuando se hace un clic sobre el nodo.")];
+		Method OnNodeClick(node As NodeActiveX) As Void
+
+		[DispId(3)];
+		[Description("Ocurre tras haber seleccionado el nodo.")];
+		Method OnNodeAfterSelect(node As NodeActiveX) As Void
+
+		[DispId(4)];
+		[Description("Ocurren antes de expandir el nodo.")];
+		Method OnNodeBeforeExpand(node As NodeActiveX) As Void
+
+		[DispId(5)];
+		[Description("Ocurren luego de expandir el nodo.")];
+		Method OnNodeAfterExpand(node As NodeActiveX) As Void
+
+		[DispId(6)];
+		[Description("Ocurren antes de contraer el nodo.")];
+		Method OnNodeBeforeCollapse(node As NodeActiveX) As Void
+
+		[DispId(7)];
+		[Description("Ocurren luego de contraer el nodo.")];
+		Method OnNodeAfterCollapse(node As NodeActiveX) As Void
+
+	End Interface
+End NameSpace
+%#IDE#%File=TEXT,AFF795DD-E501-4876-AB86-917E2D800CC2
+// Application : WinFx.Controls
+// ITreeViewApi.prg , Created : 13/2/2025   13:57
+// Interface para Métodos y Propiedades públicas
+Using System.ComponentModel
+Using System.Windows.Forms
+Using System.Runtime.InteropServices
+
+Begin NameSpace WinFx.Controls.WxTreeView
+	Interface ITreeNodeApi
+		// -------------------------------------------------------------------------------- //
+		// Propiedades
+		// -------------------------------------------------------------------------------- //
+		Property CheckBoxes As Logic [Description("Devuelve/Establece un valor que determina si el control muestra una casilla de verificación junto a cada elemento del árbol.")] Get Set
+		Property SelectedNode As NodeActiveX [Description("Devuelve el Nodo seleccionado")] Get Set
+		Property CheckInCascade As Logic [Description("Marca/desmarca el nodo padre y todos sus hijos")] Get Set
+		Property ImageSize As NodeImageSize [Description("El tamaño de la imagen en los nodos")] Get Set
+		Property ToolTipText As Logic [Description("Activar/Desactivar los tooltips en los nodos")] Get Set
+		Property Nodes As NodeActiveX[] [Description("Un array con todos los nodos creados en el Treeview.")] Get Set
+		Property Count As Int [Description("Especifica el número de Nodos creados en el Treeview.")] Get Set
+
+		// -------------------------------------------------------------------------------- //
+		// Métodos
+		// -------------------------------------------------------------------------------- //
+		[Description("Añade un Nodo al control TreeView")];
+		[ReadOnly(True)];
+		Method AddNode(;
+						id As String, ;
+						texto As String, ;
+						padre := Null As Object, ;
+						imagePathExpanded := "" As String, ;
+						imagePathCollapsed := "" As String, ;
+						toolTipText := "" As String, ;
+						foreColor := "" As String, ;
+						font := "" As String ;
+						) As TreeNode
+
+		[Description("Elimina un Nodo del control TreeView")];
+		Method RemoveNode(id As String) As Void
+
+		[Description("Actualiza el caption de un Nodo")];
+		Method UpdateNode(id As String, newText As String) As Void
+
+		[Description("Expande el Nodo actual")];
+		Method ExpandNode(id As String) As Void
+
+		[Description("Colapsa el Nodo actual")];
+		Method CollapseNode(id As String) As Void
+
+		[Description("Obtiene el caption de un Nodo dado su identificador")];
+		Method GetNodeText(id As String) As String
+
+		[Description("Expande todos los Nodos del TreeView")];
+		Method ExpandAll As Void
+
+		[Description("Contrae todos los Nodos del TreeView")];
+		[ComVisible(True)];
+		Method CollapseAll As Void
+
+		[Description("Libera el TreeView")];
+		Method Close As Void
+
+		[Description("Devuelve una lista con los nodos marcados (Solo funciona con CheckBoxes = .T.)")];
+		Method GetCheckedNodes As NodeActiveX[]
+
+		[Description("Marca/Desmarca todos los Nodos")];
+		Method CheckAll(check As Logic) As Void
+
+		[Description("LLena el treeview partiendo de un XML que representa un cursor con la misma estructura que requiere el viejo TreeView")];
+		Method LoadFromXML(tcXML As String) As Void
+
+		[Description("Busca un nodo en el Treeview usando su nombre como referencia")];
+		Method FindNode(tcKey As String, tbSearchAllChildren := True As Logic) As NodeActiveX
+
+		[Description("Inicializa el TreeView")];
+		Method Clear As Void
+	End Interface
+End NameSpace
+%#IDE#%File=TEXT,66EB35F1-595F-458C-94E0-A79E00440C2F
+// Application : WinFx.Controls
+// NodeImageSizeEnum.prg , Created : 13/2/2025   14:00
+Using System.ComponentModel
+
+Begin NameSpace WinFx.Controls.WxTreeView
+	Enum NodeImageSize
+		[Description("Small")];
+		Small := 16
+		[Description("Medium")];
+		Medium := 24
+		[Description("Large")];
+		Large := 32
+	End Enum
+End NameSpace
+%#IDE#%File=TEXT,6270DDC0-E1BE-43C7-B735-2AAEFD262D4D
+// Application : WinFx.Controls
+// NodeActiveX.prg , Created : 13/2/2025   14:04
+// User : irwin
+Using System.ComponentModel
+
+Begin NameSpace WinFx.Controls.WxTreeView
+	[Description("Representa a un Nodo del TreeView")];
+	Class NodeActiveX
+		Private _id As String
+		Property Id As String Get _id Private Set _id := value
+
+		Private _caption As String
+		Property Caption As String Get _caption Private Set _caption := value
+
+		Private _expandedImageKey As String
+		Property ExpandedImageKey As String Get _expandedImageKey Private Set _expandedImageKey := value
+
+		Private _collapsedImageKey As String
+		Property CollapsedImageKey As String Get _collapsedImageKey Private Set _collapsedImageKey := value
+
+		Private Constructor
+			// Constructor privado para forzar el builder
+		End Constructor
+
+		Class Builder
+			Private _node := NodeActiveX{} As NodeActiveX
+			Method WithKey(key As String) As Builder
+				Self:_node:_id := key
+				Return Self
+			End Method
+
+			Method WithCaption(caption As String) As Builder
+				Self:_node:_caption := caption
+				Return Self
+			End Method
+
+			Method WithExpandedImageKey(expandedImageKey As String) As Builder
+				Self:_node:_expandedImageKey := expandedImageKey
+				Return Self
+			End Method
+
+			Method WithCollapsedImageKey(collapsedImageKey As String) As Builder
+				Self:_node:_collapsedImageKey := collapsedImageKey
+				Return Self
+			End Method
+
+			Method Build As NodeActiveX
+				// Validar los parámetros
+				If String.IsNullOrWhiteSpace(Self:_node:_id) ;
+					|| String.IsNullOrWhiteSpace(Self:_node:_caption)
+					Throw InvalidOperationException{"Los parámetros Id y Caption son obligatorios"}
+				EndIf
+				Return Self:_node
+			End Method
+		End Class
+
+		Constructor(_id As String, _caption As String)
+			Self:_id := _id
+			Self:_caption := _caption
+		End Constructor
+
+		Method SetExpandedImageKey(expanded As String) As Void
+			Self:_expandedImageKey := expanded
+		End Method
+
+		Method SetCollapsedImageKey(collapsed As String) As Void
+			Self:_collapsedImageKey := collapsed
+		End Method
+
+	End Class
+End NameSpace
+%#IDE#%File=TEXT,5E294E02-7E95-412B-9FFA-A5AFF2A39363
+// Application : WinFx.Controls
+// wxTreeView.Private.prg , Created : 13/2/2025   14:26
+// Métodos helpers privados
+// User : irwin
+
+Using System
+Using System.Collections.Generic
+Using System.ComponentModel
+Using System.Data
+Using System.Drawing
+Using System.IO
+Using System.Reflection
+Using System.Runtime.InteropServices
+Using System.Text
+Using System.Windows.Forms
+
+Using Microsoft.Win32
+
+Begin NameSpace WinFx.Controls.WxTreeView
+	Partial Class wxTreeView
+		Private Method ParseRGBColor(color As String) As Color
+			Try
+				If !String.IsNullOrEmpty(color) && color:StartsWith("RGB(", StringComparison.OrdinalIgnoreCase) && color:EndsWith(")")
+					Var values := color:Substring(4, color:Length-5):Split(',')
+					If values:Length == 3
+						Var r := Int32.Parse(values[0]:Trim())
+						Var g := Int32.Parse(values[1]:Trim())
+						Var b := Int32.Parse(values[2]:Trim())
+						Return Color.FromArgb(r, g, b)
+					EndIf
+				EndIf
+			Catch
+				Nop
+			End Try
+			Return Color.Black
+		End Method
+
+		Private Method ParseFont(font As String) As Font
+			Try
+				If !String.IsNullOrEmpty(font)
+					If Self:_font:ContainsKey(font:ToLower())
+						Return Self:_font[font:ToLower()]
+					EndIf
+					Var parts := font:Split(',')
+					If parts:Length >= 2
+						Var fontName := parts[0]:Trim()
+						Var fontSize := Single.Parse(parts[1]:Trim())
+						Var fontStyle := FontStyle.Regular
+						If parts:Length >= 3
+							Var styleFlags := parts[2]:Trim():ToUpper()
+							If styleFlags:Contains("B")
+								fontStyle := fontStyle | FontStyle.Bold
+							EndIf
+							If styleFlags:Contains("I")
+								fontStyle := fontStyle | FontStyle.Italic
+							EndIf
+							If styleFlags:Contains("U")
+								fontStyle := fontStyle | FontStyle.Underline
+							EndIf
+							If styleFlags:Contains("S")
+								fontStyle := fontStyle | FontStyle.Strikeout
+							EndIf
+						EndIf
+						Var oFont := Font{fontName, fontSize, fontStyle}
+						Self:_font:Add(font:ToLower(), oFont)
+						Return oFont
+					EndIf
+				EndIf
+			Catch
+				Nop
+			End Try
+			Return Font{"Arial", 10, FontStyle.Regular}
+		End Method
+
+		Private Method GetCheckedNodesRecursive(node As TreeNode, oList As List<NodeActiveX>) As Void
+			If node:Checked
+				oList:Add((NodeActiveX)node:Tag)
+			EndIf
+			If node:Nodes:Count > 0
+				ForEach child As TreeNode In node:Nodes
+					Self:GetCheckedNodesRecursive(child, oList)
+				Next
+			EndIf
+		End Method
+
+		Private Method FindNodeById(nodes As TreeNodeCollection, id As String) As TreeNode?
+			ForEach node As TreeNode In nodes
+				If ((NodeActiveX)node:Tag):Id == id
+					Return node
+				EndIf
+				If node:Nodes:Count > 0
+					Var oNode := Self:FindNodeById(node:Nodes, id)
+					If oNode != Null
+						Return oNode
+					EndIf
+				EndIf
+			Next
+			Return Null
+		End Method
+
+		Private Method CheckChildNodes(node As TreeNode, check As Logic) As Void
+			ForEach child As TreeNode In node:Nodes
+				child:Checked := check
+				Self:CheckChildNodes(child, check)
+			Next
+		End Method
+
+		Protected Override Method Dispose(disposing As Logic) As Void
+			If disposing
+				If Self:oTreeView1 != Null
+					Self:oTreeView1:Dispose()
+					Self:oTreeView1 := Null
+				EndIf
+			EndIf
+			Super:Dispose(disposing)
+		End Method
+
+		Private Method ExpandAllWithImages(oNodes As TreeNodeCollection) As Void
+			ForEach oNode As TreeNode In oNodes
+				If oNode:Nodes:Count > 0
+					Var oInternalNode := (NodeActiveX)oNode:Tag
+					If !String.IsNullOrEmpty(oInternalNode:ExpandedImageKey)
+						oNode:ImageKey := oInternalNode:ExpandedImageKey
+						oNode:SelectedImageKey := oNode:ImageKey
+					EndIf
+					Self:ExpandAllWithImages(oNode:Nodes)
+				EndIf
+			Next
+		End Method
+
+		Private Method CollapseAllWithImages(oNodes As TreeNodeCollection) As Void
+			ForEach oNode As TreeNode In oNodes
+				If oNode:Nodes:Count > 0
+					Var oInternalNode := (NodeActiveX)oNode:Tag
+					If !String.IsNullOrEmpty(oInternalNode:CollapsedImageKey)
+						oNode:ImageKey := oInternalNode:CollapsedImageKey
+						oNode:SelectedImageKey := oNode:ImageKey
+					EndIf
+					Self:CollapseAllWithImages(oNode:Nodes)
+				EndIf
+			Next
+		End Method
+
+		Private Method LoadImage(tcImgPath As String) As String
+			If !Self:_images:TryGetValue(tcImgPath, Out image As Image)
+				image := System.Drawing.Image.FromFile(tcImgPath)
+				Self:_images[tcImgPath] := image
+			EndIf
+			Self:oTreeView1:ImageList:Images:Add(tcImgPath, image)
+
+			Return tcImgPath
+		End Method
+
+		// ------------------------------------------------------------------------- //
+		// Métodos para el registro COM
+		// ------------------------------------------------------------------------- //
+		[ComRegisterFunction()];
+		Public Static Method RegisterClass(tcKey As String) As Void
+			Var loSb := StringBuilder{tcKey}
+			loSb:Replace("HKEY_CLASSES_ROOT\", "")
+
+			Var k := Registry.ClassesRoot:OpenSubKey(loSb:ToString(), True)
+			Var ctrl := k:CreateSubKey("Control")
+			ctrl:Close()
+
+			Var inprocServer32 := k:OpenSubKey("InprocServer32", True)
+			inprocServer32:SetValue("CodeBase", Assembly.GetExecutingAssembly():CodeBase)
+			inprocServer32:Close()
+
+			k:Close()
+		End Method
+
+		[ComUnregisterFunction()];
+		Public Static Method UnregisterClass(tcKey As String) As Void
+			Var loSb := StringBuilder{tcKey}
+			loSb:Replace("HKEY_CLASSES_ROOT\", "")
+
+			Var k := Registry.ClassesRoot:OpenSubKey(loSb:ToString(), True)
+			k:DeleteSubKey("Control", False)
+
+			k:OpenSubKey("InprocServer32", True)
+			k:DeleteSubKey("CodeBase", False)
+
+			k:Close()
+		End Method
+	End Class
+End NameSpace
+%#IDE#%File=TEXT,07BF92AD-9854-4CCE-9822-37506EF3040B
+// Application : WinFx.Controls
+// wxTreeView.Events.prg , Created : 13/2/2025   17:50
+// User : irwin
+Using System.Windows.Forms
+
+Begin NameSpace WinFx.Controls.WxTreeView
+	Partial Class wxTreeView
+		Method OnTreeView_NodeMouseDoubleClick(o As Object, e As TreeNodeMouseClickEventArgs) As Void
+			Self:OnNodeDblClick?:Invoke((NodeActiveX)e:Node:Tag)
+		End Method
+
+		Method OnTreeview_NodeMouseClick(o As Object, e As TreeNodeMouseClickEventArgs) As Void
+			If e:Node == Null
+				Return
+			EndIf
+			Var oInternalNode := (NodeActiveX)e:Node:Tag
+
+			Self:OnNodeClick?:Invoke(oInternalNode)
+		End Method
+
+		Method OnTreeview_AfterSelect(o As Object, e As TreeViewEventArgs) As Void
+			If e:Node == Null
+				Return
+			EndIf
+			Var oInternalNode := (NodeActiveX)e:Node:Tag
+			Self:OnNodeAfterSelect?:Invoke(oInternalNode)
+		End Method
+
+		Method OnTreeview_AfterCheck(o As Object, e As TreeViewEventArgs) As Void
+			If !Self:CheckInCascade
+				Return
+			EndIf
+			Self:CheckChildNodes(e:Node, e:Node:Checked)
+		End Method
+
+		Method OnTreeview_BeforeExpand(o As Object, e As TreeViewCancelEventArgs) As Void
+			If e:Node == Null
+				Return
+			EndIf
+			Var oNodeActiveX := (NodeActiveX)e:Node:Tag
+
+			If e:Node:Nodes:Count > 0
+				If !String.IsNullOrEmpty(oNodeActiveX:ExpandedImageKey)
+					e:Node:ImageKey := oNodeActiveX:ExpandedImageKey
+					e:Node:SelectedImageKey := e:Node:ImageKey
+				EndIf
+			EndIf
+
+			Self:OnNodeBeforeExpand?:Invoke(oNodeActiveX)
+		End Method
+
+		Method OnTreeview_AfterExpand(o As Object, e As TreeViewEventArgs) As Void
+			If e:Node == Null
+				Return
+			EndIf
+			Var oNodeActiveX := (NodeActiveX)e:Node:Tag
+
+			If e:Node:Nodes:Count > 0
+				If !String.IsNullOrEmpty(oNodeActiveX:ExpandedImageKey)
+					e:Node:ImageKey := (oNodeActiveX:ExpandedImageKey)
+					e:Node:SelectedImageKey := e:Node:ImageKey
+				EndIf
+			EndIf
+			Self:OnNodeAfterExpand?:Invoke(oNodeActiveX)
+		End Method
+
+		Method OnTreeview_BeforeCollapse(o As Object, e As TreeViewCancelEventArgs) As Void
+			If e:Node == Null
+				Return
+			EndIf
+			Var oNodeActiveX := (NodeActiveX)e:Node:Tag
+
+			If e:Node:Nodes:Count > 0
+				If !String.IsNullOrEmpty(((NodeActiveX)e:Node:Tag):CollapsedImageKey)
+					e:Node:ImageKey := ((NodeActiveX)e:Node:Tag):CollapsedImageKey
+					e:Node:SelectedImageKey := e:Node:ImageKey
+				EndIf
+			EndIf
+
+			Self:OnNodeBeforeCollapse?:Invoke(oNodeActiveX)
+		End Method
+
+		Method OnTreeview_AfterCollapse(o As Object, e As TreeViewEventArgs) As Void
+			If e:Node == Null
+				Return
+			EndIf
+			Var oNodeActiveX := (NodeActiveX)e:Node:Tag
+			Self:OnNodeAfterCollapse?:Invoke(oNodeActiveX)
+		End Method
+	End Class
+End NameSpace
+%#IDE#%File=TEXT,BABEA2EC-8F51-4B93-8AB7-68A965C4166A
+// Application : WinFx.Controls
+// CustomTreeNode.prg , Created : 14/2/2025   11:19
+// User : irwin
+
+Using System
+Using System.Drawing
+Using System.Windows.Forms
+
+Begin NameSpace WinFx.Controls.WxTreeView
+	Class CustomTreeNode
+		Private Constructor
+			// privado para forzar el builder
+		End Constructor
+
+		Class Builder
+			Private _treeNode := TreeNode{} As TreeNode
+
+			Method WithKey(key As String) As Builder
+				Self:_treeNode:Name := key
+				Return Self
+			End Method
+
+			Method WithText(text As String) As Builder
+				Self:_treeNode:Text := text
+				Return Self
+			End Method
+
+			Method WithTag(tag As NodeActiveX) As Builder
+				Self:_treeNode:Tag := tag
+				Return Self
+			End Method
+
+			Method WithToolTipText(toolTipText As String) As Builder
+				Self:_treeNode:ToolTipText := toolTipText
+				Return Self
+			End Method
+
+			Method WithForeColor(foreColor As Color?) As Builder
+				If foreColor != Null
+					Self:_treeNode:ForeColor := (Color)foreColor
+				EndIf
+				Return Self
+			End Method
+
+			Method WithFont(font As Font) As Builder
+				If font != Null
+					Self:_treeNode:NodeFont := font
+				EndIf
+				Return Self
+			End Method
+
+			Method Build As TreeNode
+				If String.IsNullOrWhiteSpace(Self:_treeNode:Name) ;
+					|| String.IsNullOrWhiteSpace(Self:_treeNode:Text) ;
+					|| Self:_treeNode:Tag == Null
+					Throw InvalidOperationException{"Los parámetros name, text y tag son obligatorios"}
+				EndIf
+
+				Var collapsedKey := ((NodeActiveX)Self:_treeNode:Tag):CollapsedImageKey
+				If !String.IsNullOrWhiteSpace(collapsedKey)
+					Self:_treeNode:ImageKey := collapsedKey
+					Self:_treeNode:SelectedImageKey := collapsedKey
+				EndIf
+
+				Return Self:_treeNode
+			End Method
+		End Class
+	End Class
+End NameSpace
